@@ -1,3 +1,18 @@
+<script setup>
+import { ref } from "vue";
+
+const items = ref([
+  { name: "たまご", price: 100 },
+  { name: "りんご", price: 160 },
+]);
+const newItemName = ref("");
+const newItemPrice = ref(0);
+
+const addItem = () => {
+  items.value.push({ name: newItemName.value, price: newItemPrice.value });
+};
+</script>
+
 <template>
   <div>ItemList</div>
   <div v-for="item in items" :key="item.name">
@@ -19,21 +34,6 @@
     <button @click="addItem">add</button>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-const items = ref([
-  { name: "たまご", price: 100 },
-  { name: "りんご", price: 160 },
-]);
-const newItemName = ref("");
-const newItemPrice = ref(0);
-
-const addItem = () => {
-  items.value.push({ name: newItemName.value, price: newItemPrice.value });
-};
-</script>
 
 <style>
 .over500 {
