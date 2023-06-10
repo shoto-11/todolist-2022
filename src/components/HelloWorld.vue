@@ -10,8 +10,10 @@ defineProps({
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <ClickCounter />
+    <ClickCounter msg="第一弾" />
+    <ClickCounter msg="第二弾" />
     <ItemList />
+    <a> num</a>
   </div>
 </template>
 
