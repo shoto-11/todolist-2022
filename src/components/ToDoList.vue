@@ -11,7 +11,6 @@ const add_todolist = () => {
   list.value.push({ flag: newFlag.value, title: newTitle.value });
 };
 </script>
-
 <template>
   <h2>ToDoList</h2>
   <div>
